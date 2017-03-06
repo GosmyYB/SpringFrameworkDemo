@@ -12,3 +12,6 @@ copy.sh
 
 #Windows
 bin
+
+#Maven
+target
