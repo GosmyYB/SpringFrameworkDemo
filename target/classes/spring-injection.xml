@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="injectionServiceBySetter" class="com.wyb.demo.ioc.injection.service.InjectionServiceImpl">
+        <!--以 setter 的方式注入对象, 需在类中添加 setter 方法, 参数名要一致-->
+        <property name="injectionDAO" ref="injectionDao"></property>
+    </bean>
+
+    <bean id="injectionServiceByConstructor" class="com.wyb.demo.ioc.injection.service.InjectionServiceImpl">
+        <constructor-arg name="injectionDAO" ref="injectionDao"></constructor-arg>
+    </bean>
+
+    <bean id="injectionDao" class="com.wyb.demo.ioc.injection.dao.InjectionDAOImpl">
+    </bean>
+
+</beans>

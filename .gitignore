@@ -1,0 +1,14 @@
+#Mac
+copy.sh
+/bin
+.idea
+*.iml
+
+#eclipse
+.classpath
+.project
+.settings
+.DS_Store
+
+#Windows
+bin
